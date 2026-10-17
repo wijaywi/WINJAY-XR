@@ -1,0 +1,15 @@
+# Unity generated state and build output
+Unity/WinjayXR/Library/
+Unity/WinjayXR/Temp/
+Unity/WinjayXR/Obj/
+Unity/WinjayXR/Logs/
+Unity/WinjayXR/UserSettings/
+Unity/WinjayXR/Builds/
+
+# .NET build output
+**/bin/
+**/obj/
+
+# Unity offline compile-check outputs
+Tools/unity-compile-check/check*.dll
+Tools/unity-compile-check/check*.rsp

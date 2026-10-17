@@ -1,0 +1,6 @@
+<linker>
+  <!-- XrEnvironmentSetup mengakses field internal [SerializeField] OVRHand
+       (HandType) dan OVRSkeleton (_skeletonType) via reflection di runtime.
+       Preserve Assembly-CSharp agar metadata field tetap ada di build IL2CPP. -->
+  <assembly fullname="Assembly-CSharp" preserve="all" />
+</linker>

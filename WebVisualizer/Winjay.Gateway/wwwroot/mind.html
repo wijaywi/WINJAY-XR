@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WINJAY XR — Living Mind Map</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three.module.js",
+        "three/addons/controls/OrbitControls.js": "./vendor/addons/OrbitControls.js",
+        "three/addons/": "./vendor/addons/"
+      }
+    }
+  </script>
+</head>
+<body class="mind">
+  <div id="canvas-wrap"></div>
+
+  <div id="topbar">
+    <div class="brand">WINJAY XR <span class="sub">a living mind map — models argue, you curate</span></div>
+    <div class="right">
+      <a class="nav" href="./">&larr; STATE MACHINE</a>
+      <span id="topic" class="quiet"></span>
+      <span id="conn" class="conn off">connecting&hellip;</span>
+    </div>
+  </div>
+
+  <div id="controls">
+    <button id="btnRun" class="primary">RUN</button>
+    <button id="btnStep">STEP</button>
+    <button id="btnReset">RESET</button>
+    <label class="speed">speed
+      <input id="speed" type="range" min="80" max="1500" step="20" value="700" />
+    </label>
+    <span id="state" class="state"></span>
+  </div>
+
+  <div id="feed">
+    <div class="panel-title">EVENT LOG <span class="hint">(everything on the map comes from this log)</span></div>
+    <div id="feedLines"></div>
+  </div>
+
+  <div id="inspector" class="hidden">
+    <div class="panel-title" id="inspTitle">NODE</div>
+    <div id="inspBody"></div>
+    <div id="inspActions"></div>
+  </div>
+
+  <div id="whyBox" class="hidden"></div>
+
+  <div id="legend">
+    <div class="panel-title">EDGES</div>
+    <div class="legend-row"><span class="edge sw-branch"></span>branch / part-of</div>
+    <div class="legend-row"><span class="edge sw-support"></span>supports</div>
+    <div class="legend-row"><span class="edge sw-conflict"></span>contradicts (vibrates)</div>
+    <div class="legend-row"><span class="edge sw-bridge"></span>unexpected bridge</div>
+    <div class="panel-title" style="margin-top:10px">WHO MADE IT</div>
+    <div class="legend-row"><span class="dot" style="background:#4FC3F7"></span>Explorer</div>
+    <div class="legend-row"><span class="dot" style="background:#66BB6A"></span>Connector</div>
+    <div class="legend-row"><span class="dot" style="background:#FF8A65"></span>Challenger</div>
+    <div class="legend-row"><span class="dot" style="background:#FFD54F"></span>you</div>
+    <div class="legend-sep"></div>
+    <div class="legend-row"><span class="ring"></span>locked (gold, frozen)</div>
+    <div class="legend-row"><span class="dot ghostdot"></span>ghost suggestion</div>
+    <div class="legend-row"><span class="dot day1"></span>Day 1 path</div>
+    <div class="legend-row"><span class="dot day2"></span>Day 2 path</div>
+    <div class="legend-row"><span class="dot day3"></span>Day 3 path</div>
+  </div>
+
+  <div id="saybar">
+    <input id="sayInput" type="text" maxlength="60" placeholder="speak an idea (voice lives in the XR build)..." />
+    <button id="btnSay">SPEAK</button>
+  </div>
+
+  <div id="rewind">
+    <button id="btnLive" class="primary">LIVE</button>
+    <input id="rewindRange" type="range" min="0" max="0" step="1" value="0" />
+    <span id="rewindLabel">live</span>
+  </div>
+
+  <script type="module" src="mind.js"></script>
+</body>
+</html>

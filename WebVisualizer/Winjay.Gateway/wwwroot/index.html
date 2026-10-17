@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WINJAY XR — Spatial State Machine</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three.module.js",
+        "three/addons/controls/OrbitControls.js": "./vendor/addons/OrbitControls.js",
+        "three/addons/": "./vendor/addons/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="canvas-wrap"></div>
+
+  <div id="topbar">
+    <div class="brand">WINJAY XR <span class="sub">models talk to models — humans watch the state</span></div>
+    <div class="right">
+      <a class="nav" href="mind.html">MIND MAP &rarr;</a>
+      <select id="scenario" title="Scenario">
+        <option value="conflict" selected>DemoScenario01 — conflict</option>
+        <option value="resolve">ScenarioResolve — survival</option>
+      </select>
+      <span id="conn" class="conn off">connecting…</span>
+    </div>
+  </div>
+
+  <div id="controls">
+    <button id="btnRun" class="primary">RUN</button>
+    <button id="btnStep">STEP</button>
+    <button id="btnReset">RESET</button>
+    <label class="speed">speed
+      <input id="speed" type="range" min="50" max="3000" step="50" value="600" />
+    </label>
+    <span id="tick">tick 0</span>
+    <span id="status"></span>
+  </div>
+
+  <div id="trail">
+    <div class="panel-title">STATE TRAIL — H001</div>
+    <div id="trailChips"></div>
+  </div>
+
+  <div id="log">
+    <div class="panel-title">SEMANTIC EVENTS <span class="hint">(not chat — only state)</span></div>
+    <div id="logLines"></div>
+  </div>
+
+  <div id="legend">
+    <div class="panel-title">LEGEND</div>
+    <div class="legend-row"><span class="dot" style="background:#9E9E9E"></span>CREATED</div>
+    <div class="legend-row"><span class="dot" style="background:#42A5F5"></span>INVESTIGATING</div>
+    <div class="legend-row"><span class="dot" style="background:#66BB6A"></span>SUPPORTED</div>
+    <div class="legend-row"><span class="dot" style="background:#FFCA28"></span>RESOLVED</div>
+    <div class="legend-row"><span class="dot" style="background:#FF7043"></span>CONFLICTED</div>
+    <div class="legend-row"><span class="dot" style="background:#AB47BC"></span>FALSIFYING</div>
+    <div class="legend-row"><span class="dot" style="background:#EF5350"></span>FAILED</div>
+    <div class="legend-sep"></div>
+    <div class="legend-row"><span class="dot" style="background:#4FC3F7"></span>evidence (Researcher)</div>
+    <div class="legend-row"><span class="dot" style="background:#FF8A65"></span>evidence (Falsifier)</div>
+    <div class="legend-row"><span class="dot" style="background:#FFD54F"></span>decision</div>
+    <div class="legend-row"><span class="dot" style="background:#EF5350"></span>conflict / contradiction</div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
