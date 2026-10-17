@@ -229,3 +229,10 @@ Unity/WinjayXR/
       compile-checked offline (remaining: first Unity launch = license +
       package import, a user step — see Docs/UNITY_SETUP.md)
 - [ ] Demo video < 3 min + submission (Stage 5)
+
+
+## Legal & Disclaimer
+
+**IMPORTANT NOTICE:**
+This software is provided purely as an experimental, open-source research module.
+ As stated in the `LICENSE` (MIT License), this software is provided **"AS IS"**. The creators, authors, and contributors accept **ZERO LIABILITY** for hardware damage, or legal repercussions resulting from compiling, modifying, or integrating this code. 
