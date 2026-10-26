@@ -2,7 +2,7 @@
 
 **"Models talk to models. Humans watch the state."**
 
-Meta VR hackathon entry — Track: Productivity.
+Meta VR entry Track: Productivity.
 Special award target: *Best Agentic Interaction / Boldest Original Concept*.
 
 WINJAY XR turns multi-agent communication into a **spatial state machine**:
